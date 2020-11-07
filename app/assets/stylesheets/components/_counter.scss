@@ -1,0 +1,16 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.counter {
+  width: 56px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  background-color: #7e73ff;
+}

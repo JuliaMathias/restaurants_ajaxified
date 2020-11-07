@@ -5,8 +5,8 @@
   </h2>
 
   <div id="reviews">
-    <%= simple_form_for([ @restaurant, @review ]) do |f| %>
-      <%= f.input :content, as: :text %>
+    <%= simple_form_for([ @restaurant, @review ], remote: true) do |f| %>
+      <%= f.input :content %>
       <%= f.button :submit %>
     <% end %>
     <div class="mt-3">
@@ -16,7 +16,7 @@
         <% @restaurant.reviews.each do |review| %>
           <div class="card mb-3">
             <div class="card-body">
-              <p><%= review.content %></p>
+              <p id="review-<%= review.id %>"><%= review.content %></p>
             </div>
           </div>
         <% end %>
